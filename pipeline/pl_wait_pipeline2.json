@@ -1,0 +1,17 @@
+{
+	"name": "pl_wait_pipeline2",
+	"properties": {
+		"activities": [
+			{
+				"name": "This will just wait pipeline for 5 sec",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 5
+				}
+			}
+		],
+		"annotations": []
+	}
+}
