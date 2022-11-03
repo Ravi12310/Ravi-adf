@@ -1,0 +1,22 @@
+{
+	"name": "ds_Emp_Details_Source_Archieve",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lnkBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "tebarchieve"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
