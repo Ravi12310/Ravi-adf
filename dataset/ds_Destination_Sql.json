@@ -1,0 +1,69 @@
+{
+	"name": "ds_Destination_Sql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lnkAzureSql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SalePersonFName",
+				"type": "varchar"
+			},
+			{
+				"name": "SalePersonLName",
+				"type": "varchar"
+			},
+			{
+				"name": "ProductName",
+				"type": "varchar"
+			},
+			{
+				"name": "ItemsSold",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SoldPrice",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "SoldDate",
+				"type": "date"
+			},
+			{
+				"name": "City",
+				"type": "varchar"
+			},
+			{
+				"name": "State",
+				"type": "varchar"
+			},
+			{
+				"name": "Country",
+				"type": "varchar"
+			},
+			{
+				"name": "Region",
+				"type": "varchar"
+			},
+			{
+				"name": "IsActive",
+				"type": "bit"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "TotalSale_Asia"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
