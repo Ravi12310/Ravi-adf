@@ -1,0 +1,24 @@
+{
+	"name": "ds_Emp_details_Sql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lnkAzureSqlDb",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"dsTableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().dsTableName",
+				"type": "Expression"
+			}
+		}
+	}
+}
