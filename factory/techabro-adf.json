@@ -1,0 +1,9 @@
+{
+	"name": "techabro-adf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "89a065bb-bad4-403d-b845-9e7ca4e6557b",
+		"tenantId": "bc867cf2-dee2-4519-b264-331e23e8a2ab"
+	}
+}
