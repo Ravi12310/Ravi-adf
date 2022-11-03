@@ -6,7 +6,7 @@
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
 			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=techbroserver.database.windows.net;initial catalog=techbroDB;user id=Ravisql",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEUwNjlFOURELTFCM0QtNEU0NC1CQUQ1LTQ0RjgxMEUzQ0UxRV9mNTAwNmU0NS1lNjcyLTQzM2QtYTc0Yi03MTQ3NTg0MGJjMDAiDQp9"
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDAyRkE2RkRDLTVCQjQtNEQ2Qy04NDhDLTExNEVFREFDNDg4RV82Y2QyYmI0NS0xMWIzLTQ4MTItYmI2NC0zOGRmOTIyNzNkNWIiDQp9"
 		}
 	}
 }
