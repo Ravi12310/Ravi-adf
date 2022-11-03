@@ -1,0 +1,20 @@
+{
+	"name": "ds_JsonDestintion",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lnkBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "SampleJsonFile.txt",
+				"container": "jsondestination"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
