@@ -6,10 +6,7 @@
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
 			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=techbroserver.database.windows.net;initial catalog=techbroDB;user id=Ravisql",
-			"alwaysEncryptedSettings": {
-				"alwaysEncryptedAkvAuthType": "ManagedIdentity"
-			},
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDRENUVDMEJFLUY1Q0YtNDc5Mi1BMEY5LTdDNzlFQTgzMkUxQV81MTJjZjMxNS0zYTlhLTQyZTEtYjhjOC0wYmU5YWQ2ZjgwZDUiDQp9"
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEQ4RjE5QTlELUYyM0MtNDJGRC04NUU2LTgzMDcwNjhDREIxRl84ZTFmZTkzMy1lMmExLTQ4MGQtYTQ4My03MzdiYjMxMDhhZmQiDQp9"
 		}
 	}
 }
