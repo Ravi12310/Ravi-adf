@@ -1,0 +1,9 @@
+{
+	"name": "techbro-Adf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "678d48fd-28ce-41c0-b57a-622503e2baab",
+		"tenantId": "bc867cf2-dee2-4519-b264-331e23e8a2ab"
+	}
+}

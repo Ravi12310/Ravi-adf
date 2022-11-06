@@ -1,26 +1,24 @@
 {
-	"name": "ds_BlobSource",
+	"name": "ds_ContainerNameSource",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "lnkBlobStorage",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"ContainerName": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
-		"type": "Binary",
+		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": {
-					"value": "@dataset().ContainerName",
-					"type": "Expression"
-				}
-			}
-		}
+				"fileName": "MasterFile.txt",
+				"container": "masterfile"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }
