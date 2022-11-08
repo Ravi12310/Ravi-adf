@@ -1,0 +1,97 @@
+{
+	"name": "pl_CheckIfFileExistsOrNotInBlob",
+	"properties": {
+		"activities": [
+			{
+				"name": "Get Metadata1",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_Blobsrc",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"exists"
+					],
+					"storeSettings": {
+						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
+			},
+			{
+				"name": "If Condition1",
+				"type": "IfCondition",
+				"dependsOn": [
+					{
+						"activity": "Get Metadata1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@activity('Get Metadata1').output.exists",
+						"type": "Expression"
+					},
+					"ifFalseActivities": [
+						{
+							"name": "File Not Exists",
+							"type": "WebActivity",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"url": "https://prod-18.eastus.logic.azure.com:443/workflows/f8dd774dd4494baca2dc9a4e740ddd85/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=MVJyyrGhJMG9pBsPmhlMxBeuzB5Sgasvp_A3fn6LkH0",
+								"method": "GET"
+							}
+						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "File Exists",
+							"type": "WebActivity",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"url": "https://prod-18.eastus.logic.azure.com:443/workflows/f8dd774dd4494baca2dc9a4e740ddd85/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=MVJyyrGhJMG9pBsPmhlMxBeuzB5Sgasvp_A3fn6LkH0",
+								"method": "GET"
+							}
+						}
+					]
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2022-11-08T04:06:05Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
